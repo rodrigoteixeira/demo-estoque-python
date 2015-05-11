@@ -1,0 +1,14 @@
+[
+    {
+        'id': 1,
+        'nome' : 'DVD'
+    },
+    {
+        'id': 2,
+        'nome' : 'limpeza'
+    },	
+	{
+        'id': 3,        
+		'categoria' : 'fantasia'
+    }	
+]

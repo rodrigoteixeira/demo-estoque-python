@@ -1,8 +1,8 @@
 application: demo-estoque
-version: 3
+version: 2.7
 runtime: python
 api_version: 1
 
 handlers:
 - url: .*
-  script: app/hello.py
+  script: app/AplicacaoEstoque.py

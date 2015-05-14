@@ -1,9 +1,0 @@
-[
-    {
-        'id' : 1,
-        'vendedor' : 'Thiago',
-        'itens' : [2, 3],
-        'observacao' : 'Desconto por pagamento a vista'
-    }
-     
-]

@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="meuEstoque">
   <head>
     <link rel="stylesheet" href="/ui/lib/bootstrap.min.css">
     <link rel="stylesheet" href="/ui/style.css">
@@ -7,15 +7,16 @@
   </head>
   <body>
       
-    <div class="container">
+    <div class="container" ng-controller="MainController as mainCtrl">
 
         <h1>Pequeno estoque</h1>        
 
-        <section class="row">
+        <section class="row" ng-controller="ProdutoController as prodCtrl">
             <div class="col-md-8"> 
                 <div class="panel panel-default">
                     <div class="panel-heading">Lista de Produtos  
-                        <button type="button" class="btn btn-primary btn-xs">
+                        <button type="button" class="btn btn-primary btn-xs"
+                            ng-click="prodCtrl.novo()">
                             Novo
                         </button>
                     
@@ -30,6 +31,9 @@
                                     Categoria
                                 </th>
                                 <th>
+                                    Preço
+                                </th>
+                                <th>
                                     Quant.
                                 </th>
                                 <th>
@@ -37,35 +41,22 @@
                                 </th>
                             </tr>
                             
-                            <tr>
+                            <tr ng-repeat="prod in prodCtrl.produtos">
                                 <td>
-                                    Produto 1
+                                    {{prod.nome}}
                                 </td>
                                 <td>
-                                    DVD
+                                    {{prod.categoria}}
                                 </td>
                                 <td>
-                                    15
+                                    {{prod.preco}}
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary btn-xs">
-                                        editar
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td>
-                                    Produto 2
+                                    {{prod.quantidade}}
                                 </td>
                                 <td>
-                                    Limpesa
-                                </td>
-                                <td>
-                                    16
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-xs">
+                                    <button type="button" class="btn btn-primary btn-xs"
+                                        ng-click="prodCtrl.editar(prod)">
                                         editar
                                     </button>
                                 </td>
@@ -83,16 +74,21 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Cadastro de Produtos</div>
                     <div class="panel-body">
-                        <form>
+                        <form ng-show="prodCtrl.produtoCorrente" 
+                                ng-submit="prodCtrl.salvar()">
                             <div class="form-group">
                                 <label for="nome">Nome</label>
                                 <input type="text" class="form-control" 
-                                    id="nome" placeholder="Nome do produto">
+                                    required
+                                    id="nome" placeholder="Nome do produto"
+                                    ng-model="prodCtrl.produtoCorrente.nome">
                             </div>
                             
                             <div class="form-group">
                                 <label for="categoria">Categoria</label>
-                                <select id="categoria" class="form-control">
+                                <select id="categoria" class="form-control"
+                                    required
+                                    ng-model="prodCtrl.produtoCorrente.categoria">
                                     <option></option>
                                     <option>DVD</option>
                                     <option>Limpesa</option>
@@ -103,16 +99,26 @@
                             <div class="form-group">
                                 <label for="descricao">Descricao</label>
                                 <textarea class="form-control" placeholder="Descrição do produto" 
+                                    ng-model="prodCtrl.produtoCorrente.descricao"
                                     id="descricao" rows="3"></textarea>
                             </div>
                             
                             <div class="form-group">
                                 <label for="preco">Preço</label>
                                 <input type="text" class="form-control" 
-                                    id="preco" placeholder="Preço do produto">
+                                    required
+                                    id="preco" placeholder="Preço do produto"
+                                    ng-model="prodCtrl.produtoCorrente.preco">
                             </div>
                             
                             <input type="submit" value="Submit" class="btn btn-primary"/>
+                                    
+                                    
+                            <button type="button" 
+                                class="btn btn-danger" style="flow:right"
+                                ng-click="prodCtrl.cancelar()">
+                                editar
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -226,5 +232,6 @@
     </div>
     
     <script src="/ui/lib/angular-1.3.15/angular.js"></script>
+    <script type="text/javascript" src="/ui/src/app.js"></script>
   </body>
 </html>

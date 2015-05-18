@@ -1,0 +1,12 @@
+## Pré-requisitos:
+
+- Conhecimento básico de HTML, CSS, Javascript e Python
+
+
+
+## Etapas do laboratório:
+
+0 - Compreender a configuração da aplicação
+1 - Aprender o controle a algumas diretivas do Angular
+2 - Compreender a criação de uma API REST em Python (usando Flask)
+3 - Aprender a realizar chamadas AJAX em Angular para conectar o Frontend ao Backend

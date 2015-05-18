@@ -1,0 +1,30 @@
+[
+    {
+        'id': 1,
+        'produto' : 1,
+		'data' : '01/05/2015',
+		'tipo' : 'COMPRA',
+		'quantidade' : 3
+    },
+    {
+        'id': 2,
+        'produto' : 1,
+		'data' : '01/05/2015',
+		'tipo' : 'VENDA',
+		'quantidade' : 5		
+    },
+	{
+        'id': 3,
+        'produto' : 4,
+		'data' : '01/05/2015',
+		'tipo' : 'VENDA',
+		'quantidade' : 2				
+    },
+	{
+        'id': 4,
+        'produto' : 3,
+		'data' : '02/05/2015',
+		'quantidade' : 20,			
+		'tipo' : 'COMPRA'
+    }
+]

@@ -7,6 +7,21 @@
 ## Etapas do laboratório:
 
 0 - Compreender a configuração da aplicação
+
 1 - Aprender o controle a algumas diretivas do Angular
+
 2 - Compreender a criação de uma API REST em Python (usando Flask)
+
+    Referência(s): http://flask.pocoo.org/docs/0.10/tutorial/views/
+                   http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
 3 - Aprender a realizar chamadas AJAX em Angular para conectar o Frontend ao Backend
+    Referência: 
+    Uma abordagem diferente utilizando Knockout: http://blog.miguelgrinberg.com/post/writing-a-javascript-rest-client
+    
+4 - [Apresentação] Refatorando a aplicação para utilizar Pluggable views
+    Referência: http://flask.pocoo.org/docs/0.10/views/
+    Uma abordagem diferente utilizando Flask-RESTful: http://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful
+    
+5 - [Apresentação] Refatorando os modulos e pacotes da aplicação
+    Referência(s): http://flask.pocoo.org/docs/0.10/patterns/packages/
+                   http://flask.pocoo.org/docs/0.10/patterns/appfactories/    

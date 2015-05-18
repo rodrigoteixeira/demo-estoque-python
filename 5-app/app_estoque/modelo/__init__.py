@@ -1,0 +1,3 @@
+from app_estoque.modelo.produtos import RepositorioProdutos
+from app_estoque.modelo.operacoes import RepositorioOperacoes
+from app_estoque.modelo.excecoes import ElementoInexistente, ElementoInvalido

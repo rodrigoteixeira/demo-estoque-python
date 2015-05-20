@@ -37,7 +37,7 @@ class RepositorioProdutos:
         resultado = [produto for produto in self.produtos if produto['id'] == prodid]
         if len(resultado) == 0:        
             raise ElementoInexistente
-        return resultado        
+        return resultado[0]        
     
     def remover(self, prodid):
         produto = self.buscarPorId(prodid);

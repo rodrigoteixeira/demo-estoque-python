@@ -25,3 +25,8 @@
 5 - [Apresentação] Refatorando os modulos e pacotes da aplicação
     Referência(s): http://flask.pocoo.org/docs/0.10/patterns/packages/
                    http://flask.pocoo.org/docs/0.10/patterns/appfactories/    
+                   
+6 - [Apresentação] Utilizando um banco de dados com SQLAlchemy  [FALTA]
+    Referência(s): http://flask.pocoo.org/docs/0.10/patterns/sqlalchemy/
+                   http://alextechrants.blogspot.com.br/2013/11/10-common-stumbling-blocks-for.html
+                   http://flask.pocoo.org/docs/0.10/patterns/sqlite3/

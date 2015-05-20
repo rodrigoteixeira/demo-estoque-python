@@ -43,7 +43,7 @@ class RepositorioOperacoes:
         resultado = [operacao for operacao in self.operacoes if operacao['id'] == opid]
         if len(resultado) == 0:        
             raise ElementoInexistente
-        return resultado        
+        return resultado[0]        
     
     def remover(self, opid):
         operacao = self.buscarPorId(opid);

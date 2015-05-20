@@ -28,10 +28,8 @@ def list_Produtos():
 def create_prod():
     try:
         if not request.json['id']:
-            print( 'adicionar' )
             produto = repProdutos.adicionar(request.json)
         else:
-            print( 'atualizar' )
             produto = repProdutos.atualizar(request.json)
             
         return jsonify({'resultado': produto}), HTTP_201_CREATED

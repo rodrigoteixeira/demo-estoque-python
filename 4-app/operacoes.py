@@ -43,7 +43,7 @@ class RepositorioOperacoes:
         resultado = [operacao for operacao in self.operacoes if operacao['id'] == opid]
         if len(resultado) == 0:        
             raise ElementoInexistente
-        return resultado        
+        return resultado[0]        
     
     def remover(self, opid):
         operacao = self.buscarPorId(opid);
@@ -52,7 +52,7 @@ class RepositorioOperacoes:
     def ehvalido(self, operacao):
         return (not operacao.quantidade or operacao.quantidade >= 0) and \
                (not operacao.preco or operacao.tipo == "COMPRA"  or operacao.tipo == "VENDA") and \
-               (not operacao.produto or self.repositorioProdutos.contemProduto(operacao.produto));
+               (not operacao.produto or repositorioProdutos.contemProduto(operacao.produto));
                
     def adicionar(self, novaoperacao):
         if not (novaoperacao and all (k in novaoperacao for k in ('tipo', 'quantidade', 'data', 'produto'))) and self.ehvalido(novaoperacao):        
